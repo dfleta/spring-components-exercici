@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ServeiConsultaEmpreses {
 
-	private float mitjanaDiariaCotizacions = 0f;
-
 	// aquest servei necessita d'un integrador de cotitzacions per retornar la informacio
 	// declarau la dependencia i feis que spring la resolgui
 	@Autowired
 	IntegradorCotitzacions clientCotizacions = new ClientCotitzacionsWS();
 	
+	private float mitjanaDiariaCotizacions = 0f;
+
 	@PostConstruct
 	public void init() {
 		this.mitjanaDiariaCotizacions = clientCotizacions.obteMitjanaDiariaCotitzacions();
@@ -32,7 +32,6 @@ public class ServeiConsultaEmpreses {
 	// com farieu per fer que el metode infoDiari de obteMitjanaDiariaCotitzacions nomes se crides una vegada?
 	// pista (si nomes s'ha de cridar una vegada ... haurem de guardar el resultat a alguna banda ... )
 	public String infoDiari() {
-
 		return "La cotitzacio mitjana diaria es " + this.mitjanaDiariaCotizacions;
 	}
 
