@@ -31,7 +31,7 @@ public class ComponentsTests {
 	}
 	
 	/**
-	 * ServeiConsultaEmpreses la classe IntegradorCotitzacions per a que sigui un compoment detectat per Spring 
+	 * Modifiqueu la classe ServeiConsultaEmpreses per a que sigui un compoment detectat per Spring 
 	 */
 	@Test
 	public void test_serveiConsultaEmpreses_component() {
