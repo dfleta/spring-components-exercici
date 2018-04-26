@@ -10,13 +10,12 @@ public class ServeiConsultaEmpreses {
 	// aquest servei necessita d'un integrador de cotitzacions per retornar la informacio
 	// declarau la dependencia i feis que spring la resolgui
 	@Autowired
-	IntegradorCotitzacions integradorCotitzacions = new ClientCotitzacionsWS();
+	IntegradorCotitzacions clientCotizacions = new ClientCotitzacionsWS();
 	
 	
 	// modifiqueu aquest metode per canviar el 0 per el valor obtingut del clientCotitzacionsWS
 	public String infoEmpresa(String empresa) {
-		// return "La empresa " + empresa + " cotitza a 0";
-		return "La empresa " + empresa + " cotitza a " + integradorCotitzacions.obteCotitzacio(empresa);
+		return "La empresa " + empresa + " cotitza a " + clientCotizacions.obteCotitzacio(empresa);
 	}
 
 	
