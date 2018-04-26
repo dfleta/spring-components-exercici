@@ -1,5 +1,7 @@
 package org.formacio.component;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.stereotype.Component;
 
 //aquesta classe ha de ser detectada com un component
@@ -21,5 +23,4 @@ public class ClientCotitzacionsWS implements IntegradorCotitzacions {
 		     default : return 20f;
 		}
 	}
-
 }
